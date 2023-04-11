@@ -4,7 +4,13 @@ require("mason").setup({
     }
 })
 
+
+
 local lspconfig = require("lspconfig")
+
+require('lspconfig.ui.windows').default_options = {
+    border = "single",
+}
 
 require('mason-lspconfig').setup({
     ensure_installed = { "lua_ls" },
