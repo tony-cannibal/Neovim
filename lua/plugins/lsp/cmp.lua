@@ -98,3 +98,22 @@ cmp.event:on(
     'confirm_done',
     cmp_autopairs.on_confirm_done()
 )
+
+
+vim.diagnostic.config({
+    virtual_text = false,
+    -- signs = {
+    --     active = signs, -- show signs
+    -- },
+    update_in_insert = true,
+    underline = true,
+    severity_sort = true,
+    -- float = {
+    --     focusable = true,
+    --     style = "minimal",
+    --     border = "rounded",
+    --     source = "always",
+    --     header = "",
+    --     prefix = "",
+    -- },
+})
