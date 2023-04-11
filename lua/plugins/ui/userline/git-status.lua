@@ -6,11 +6,11 @@ local Git = {
         self.status_dict = vim.b.gitsigns_status_dict
         self.has_changes = self.status_dict.added ~= 0 or self.status_dict.removed ~= 0 or self.status_dict.changed ~= 0
     end,
-    hl = { fg = "orange" }, --, bg = "#990990" },
+    hl = { fg = "orange" },
     {
         -- git branch name
         provider = function(self)
-            return "  " .. self.status_dict.head .. " "
+            return "  " .. self.status_dict.head
         end,
         hl = { bold = true }
     },
@@ -19,14 +19,14 @@ local Git = {
         condition = function(self)
             return self.has_changes
         end,
-        provider = "( "
+        provider = " ("
     },
     {
         provider = function(self)
-            local count = self.status_dict.added or 0
-            local changed = self.status_dict.changed or 0
             local removed = self.status_dict.removed or 0
-            if changed > 0 or removed > 0 then
+            local changed = self.status_dict.changed or 0
+            local count = self.status_dict.added or 0
+            if removed > 0 or changed > 0 then
                 return count > 0 and ("+" .. count .. " ")
             else
                 return count > 0 and ("+" .. count)
@@ -36,13 +36,12 @@ local Git = {
     },
     {
         provider = function(self)
-            -- local added = self.status_dict.added or 0
             local changed = self.status_dict.changed or 0
             local count = self.status_dict.removed or 0
             if changed > 0 then
                 return count > 0 and ("-" .. count .. " ")
             else
-                return count > 0 and ("-" .. count)
+                return count > 0 and ("-" .. count .. " ")
             end
         end,
         hl = { fg = "diag_error" },
@@ -58,7 +57,7 @@ local Git = {
         condition = function(self)
             return self.has_changes
         end,
-        provider = " ) ",
+        provider = ") ",
     },
 }
 
