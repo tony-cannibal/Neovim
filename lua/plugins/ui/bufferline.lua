@@ -92,25 +92,27 @@ bufferline.setup { options = {
         background = {
             fg = { attribute = "fg", highlight = "TabLine" },
             bg = { attribute = "bg", highlight = "TabLine" },
+            italic = false,
         },
         buffer_selected = {
             fg = { attribute = 'fg', highlight = '#ff0000' },
             bg = { attribute = 'bg', highlight = '#0000ff' },
-            italic = false
+            italic = false,
         },
         buffer_visible = {
             fg = { attribute = "fg", highlight = "TabLine" },
             bg = { attribute = "bg", highlight = "TabLine" },
-            italic = false
+            italic = false,
         },
         close_button = {
             fg = { attribute = "fg", highlight = "TabLine" },
             bg = { attribute = "bg", highlight = "TabLine" },
-            italic = false
+            italic = false,
         },
         close_button_visible = {
             fg = { attribute = "fg", highlight = "TabLine" },
             bg = { attribute = "bg", highlight = "TabLine" },
+            italic = false,
         },
         -- close_button_selected = {
         --   fg = {attribute='fg',highlight='TabLineSel'},
