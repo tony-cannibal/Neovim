@@ -20,7 +20,7 @@ local options = {
     splitbelow = true,
     splitright = true,
     swapfile = false,
-    -- timeoutlen = 100,
+    timeoutlen = 100,
     undofile = true,
     updatetime = 300,
     writebackup = false,
@@ -42,7 +42,7 @@ local options = {
 }
 
 for k, v in pairs(options) do
-  vim.opt[k] = v
+    vim.opt[k] = v
 end
 
 -- vim.opt.listchars:append "space:⋅"

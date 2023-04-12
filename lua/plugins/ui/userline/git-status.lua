@@ -10,7 +10,7 @@ local Git = {
     {
         -- git branch name
         provider = function(self)
-            return "  " .. self.status_dict.head
+            return "  " .. self.status_dict.head .. " "
         end,
         hl = { bold = true }
     },
@@ -41,7 +41,7 @@ local Git = {
             if changed > 0 then
                 return count > 0 and ("-" .. count .. " ")
             else
-                return count > 0 and ("-" .. count .. " ")
+                return count > 0 and ("-" .. count)
             end
         end,
         hl = { fg = "diag_error" },

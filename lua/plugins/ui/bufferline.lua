@@ -101,10 +101,12 @@ bufferline.setup { options = {
         buffer_visible = {
             fg = { attribute = "fg", highlight = "TabLine" },
             bg = { attribute = "bg", highlight = "TabLine" },
+            italic = false
         },
         close_button = {
             fg = { attribute = "fg", highlight = "TabLine" },
             bg = { attribute = "bg", highlight = "TabLine" },
+            italic = false
         },
         close_button_visible = {
             fg = { attribute = "fg", highlight = "TabLine" },
@@ -118,15 +120,18 @@ bufferline.setup { options = {
         tab_selected = {
             fg = { attribute = "fg", highlight = "Normal" },
             bg = { attribute = "bg", highlight = "Normal" },
+            italic = false,
         },
         tab = {
             fg = { attribute = "fg", highlight = "TabLine" },
             bg = { attribute = "bg", highlight = "TabLine" },
+            italic = false,
         },
         tab_close = {
             -- fg = {attribute='fg',highlight='LspDiagnosticsDefaultError'},
             fg = { attribute = "fg", highlight = "TabLineSel" },
             bg = { attribute = "bg", highlight = "Normal" },
+            italic = false
         },
         duplicate_selected = {
             fg = { attribute = "fg", highlight = "TabLineSel" },

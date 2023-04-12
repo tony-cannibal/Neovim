@@ -70,6 +70,7 @@ return packer.startup(function(use)
         "akinsho/bufferline.nvim",
         tag = "v3.*", requires = "nvim-tree/nvim-web-devicons"
     }
+
     use { "goolord/alpha-nvim" }
 
     use { "nvim-tree/nvim-tree.lua" }
@@ -79,6 +80,12 @@ return packer.startup(function(use)
         tag = 'release' -- To use the latest release (do not use this if you run Neovim nightly or dev builds!)
     }
 
+    use { 'norcalli/nvim-colorizer.lua' }
+    use { "folke/which-key.nvim" }
+
+    use { "mfussenegger/nvim-dap" }
+    use { "jay-babu/mason-nvim-dap.nvim" }
+    use { "rcarriga/nvim-dap-ui" }
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if packer_bootstrap then
